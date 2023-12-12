@@ -1,45 +1,46 @@
 package com.example.project1
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 class ItemDetailFragment : Fragment() {
 
-    private var itemName: TextView? = null
-    private var itemDescription: TextView? = null
-    private var itemPrice: TextView? = null
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
 
-        val view = inflater.inflate(R.layout.item_detail, container, false)
-        initView(view)
-        return view
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.item_detail,container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setValuesToViews()
+
+        val name = arguments?.getString("itemName")
+        val price = arguments?.getString("itemPrice")
+        val description = arguments?.getString("itemDescription")
+
+        val nameTextView = view.findViewById<TextView>(R.id.textView1)
+        val priceTextView = view.findViewById<TextView>(R.id.textView2)
+
+        nameTextView.text = name
+        priceTextView.text = price
+
+        val changeActivityButton: Button = view.findViewById(R.id.retur)
+        changeActivityButton.setOnClickListener {
+            changeActivity()
+        }
     }
 
-    private fun initView(view: View) {
-        itemName = view.findViewById(R.id.textView1)
-        itemPrice = view.findViewById(R.id.textView2)
-        itemDescription = view.findViewById(R.id.textView3)
-
-    }
-
-    private fun setValuesToViews() {
-        itemName?.text = arguments?.getString("name")
-        itemPrice?.text = arguments?.getString("price")
-        itemDescription?.text = arguments?.getString("description")
-
+    private fun changeActivity() {
+        val intent = Intent(requireContext(), MainActivity::class.java)
+        startActivity(intent)
     }
 }

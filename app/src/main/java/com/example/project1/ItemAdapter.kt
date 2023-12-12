@@ -19,13 +19,7 @@ class ItemAdapter(private var itemList: List<ItemModel>) : RecyclerView.Adapter<
         holder.itemName.text = item.itemName // Assuming empSource is the source field in RideModel
         holder.itemPrice.text = item.itemPrice.toString() // Assuming empDestination is the destination field in RideModel
         holder.itemView.setOnClickListener {
-            val bundle = Bundle().apply {
-                putString("name", item.itemName)
-                putString("price", item.itemPrice.toString())
-                putString("description", item.itemDescription)
 
-            }
-            holder.itemView.findNavController().navigate(R.id.action_homeFragment_to_itemDetailFragment, bundle)
         }  }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

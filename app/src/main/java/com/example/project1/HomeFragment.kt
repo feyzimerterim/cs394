@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home)   {
 
     private lateinit var viewModel: HomeViewModel
     private lateinit var recyclerView: RecyclerView
@@ -38,4 +39,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
 
+
 }
+
