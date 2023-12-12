@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity(){
          binding.bottomNavigationView.setOnItemSelectedListener {
              when(it.itemId) {
                  R.id.home->replaceFragment(HomeFragment())
-                 R.id.profile->replaceFragment(Profile())
                  R.id.basket->replaceFragment(Basket())
+                 R.id.profile->replaceFragment(Profile())
                  else ->{
 
                  }

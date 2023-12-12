@@ -33,11 +33,5 @@
         <action
             android:id="@+id/action_homeFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profile2"
-            app:destination="@id/profile2" />
-        <action
-            android:id="@+id/action_homeFragment_to_basket2"
-            app:destination="@id/basket2" />
     </fragment>
 </navigation>
