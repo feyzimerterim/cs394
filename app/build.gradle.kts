@@ -30,6 +30,7 @@ android {
     }
     buildFeatures {
         viewBinding= true
+        dataBinding=true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -61,5 +62,6 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-
+    implementation("androidx.navigation:navigation-fragment-ktx:")
+    implementation("androidx.navigation:navigation-ui-ktx:")
 }

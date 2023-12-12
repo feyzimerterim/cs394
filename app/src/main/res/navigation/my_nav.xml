@@ -16,11 +16,6 @@
         android:label="activity_main2"
         tools:layout="@layout/item_detail" />
     <fragment
-        android:id="@+id/basket2"
-        android:name="com.example.project1.Basket"
-        android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket" />
-    <fragment
         android:id="@+id/profile2"
         android:name="com.example.project1.Profile"
         android:label="fragment_profile"
@@ -33,5 +28,19 @@
         <action
             android:id="@+id/action_homeFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profile2"
+            app:destination="@id/profile2" />
+        <action
+            android:id="@+id/action_homeFragment_to_sellFragment"
+            app:destination="@id/sellFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.example.project1.SellFragment"
+        android:label="SellFragment" >
+        <action
+            android:id="@+id/action_sellFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
