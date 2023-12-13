@@ -14,10 +14,12 @@ class ItemAdapter(private var itemList: List<ItemModel>) : RecyclerView.Adapter<
         val itemName: TextView = view.findViewById(R.id.itemName)
         val itemPrice: TextView = view.findViewById(R.id.itemPrice)
     }
+    override fun getItemCount(): Int = itemList.size
+
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = itemList[position]
-        holder.itemName.text = item.itemName // Assuming empSource is the source field in RideModel
-        holder.itemPrice.text = item.itemPrice.toString() // Assuming empDestination is the destination field in RideModel
+        holder.itemName.text = item.itemName
+        holder.itemPrice.text = item.itemPrice.toString()
         holder.itemView.setOnClickListener {
 
         }  }
@@ -30,7 +32,7 @@ class ItemAdapter(private var itemList: List<ItemModel>) : RecyclerView.Adapter<
 
 
 
-    override fun getItemCount(): Int = itemList.size
+
 
     fun updateData(newList: List<ItemModel>) {
         itemList = newList

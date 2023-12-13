@@ -8,7 +8,7 @@ class SellViewModel : ViewModel() {
     private var database: FirebaseDatabase = FirebaseDatabase.getInstance()
     private var ref: DatabaseReference = database.getReference("Items")
 
-    fun saveItemData(itemModel: ItemModel) {
+    fun saveItemInfo(itemModel: ItemModel) {
         val id = ref.push().key ?: return
         val itemRef = ref.child(id);
 

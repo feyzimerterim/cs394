@@ -6,36 +6,22 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class HomeViewModel : ViewModel() , RecyclerViewInterface {
-    private val _itemData = MutableLiveData<List<ItemModel>>()
-    val itemData: LiveData<List<ItemModel>> = _itemData
+    private val itemInformation = MutableLiveData<List<ItemModel>>()
     private val itemsList = mutableListOf<ItemModel>()
+    
+    val itemData: LiveData<List<ItemModel>> = itemInformation
+  
     init {
-        fetchData()
+        getData()
     }
 
     private lateinit var supportFragmentManager: FragmentManager
-    private fun fetchData() {
-        val database: DatabaseReference = Firebase.database.reference
 
-
-        database.child("Items").get().addOnSuccessListener { dataSnapshot ->
-
-
-            for (itemSnapshot in dataSnapshot.children) {
-                val item = itemSnapshot.getValue(ItemModel::class.java)
-                item?.let { itemsList.add(it) }
-            }
-            _itemData.value = itemsList
-        }.addOnFailureListener {
-        }
-
-    }
     override fun onItemClick(position: Int) {
         val itemDetailFragment = ItemDetailFragment()
 
@@ -50,4 +36,20 @@ class HomeViewModel : ViewModel() , RecyclerViewInterface {
             .addToBackStack(null)
             .commit()
     }
+
+    private fun getData() {
+        val database: DatabaseReference = Firebase.database.reference
+
+        database.child("Items").get().addOnSuccessListener { dataSnapshot ->
+
+            for (itemSnapshot in dataSnapshot.children) {
+                val item = itemSnapshot.getValue(ItemModel::class.java)
+                item?.let { itemsList.add(it) }
+            }
+            itemInformation.value = itemsList
+        }.addOnFailureListener {
+        }
+
+    }
+
 }

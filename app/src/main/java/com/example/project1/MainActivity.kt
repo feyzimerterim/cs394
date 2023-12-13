@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(){
 
     }
 
-    fun replaceFragment(fragment:Fragment) {
+    private fun replaceFragment(fragment:Fragment) {
         val fragmentStateManager=supportFragmentManager
         val fragmentTransaction = fragmentStateManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)

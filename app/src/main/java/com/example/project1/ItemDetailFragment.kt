@@ -16,7 +16,6 @@ class ItemDetailFragment : Fragment() {
         savedInstanceState: Bundle?
 
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.item_detail,container, false)
     }
 
@@ -33,14 +32,5 @@ class ItemDetailFragment : Fragment() {
         nameTextView.text = name
         priceTextView.text = price
 
-        val changeActivityButton: Button = view.findViewById(R.id.retur)
-        changeActivityButton.setOnClickListener {
-            changeActivity()
-        }
-    }
-
-    private fun changeActivity() {
-        val intent = Intent(requireContext(), MainActivity::class.java)
-        startActivity(intent)
     }
 }
