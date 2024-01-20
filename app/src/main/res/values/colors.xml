@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="my_color">#F2D7D5</color>
+    <color name="cardBackground">#F6C2C2</color>
+    <color name="primaryText">#333333</color>
+    <color name="secondaryText">#525050</color>
+    <color name="buttonBackground">#c4b4f0</color>
+    <color name="primaryColor">#6750a4</color>
+    <color name="hoverCardBackground">#f211eb</color>
+
+
+</resources>

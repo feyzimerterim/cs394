@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">CS394_Project1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="items_name">Kulaklık</string>
+    <string name="items_description">Kulak üstü Kulaklık</string>
+    <string-array name="item_for_purchase_txt">
+        <item>Kulaklık</item>
+        <item>Bİlgisayar</item>
+        <item>Telefon</item>
+        <item>oyun</item>
+        <item>yemek</item>
+        <item>Sağlık</item>
+    </string-array>
+    <string-array name="item_for_purchase_desctipton_txt">
+        <item>Kulak üstü kulaklık</item>
+        <item>Oyun bilgisyarı</item>
+        <item>İphone 15</item>
+        <item>Crash Bandicoot</item>
+        <item>Balık</item>
+        <item>C vitamini</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

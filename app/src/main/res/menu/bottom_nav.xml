@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="Login/Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_arrow_back_24"
+        android:titleCondensed="Login/Sign Up" />
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_home_24"
+        android:titleCondensed="Home" />
+
+    <item
+        android:id="@+id/sellFragment"
+        android:title="Sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_sell_24"
+        android:titleCondensed="Sell" />
+
+    <item
+        android:id="@+id/basketFragment"
+        android:title="Basket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_shopping_basket_24"
+        android:titleCondensed="Basket" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_person_24"
+        android:titleCondensed="Profile" />
+</menu>
